@@ -13,6 +13,17 @@ penguin_rect = penguin_image.get_rect(center=(SCREEN_WIDTH // 2,SCREEN_HEIGHT //
 
 text = pygame.font.Font(None, 36).render('Hello World', True, pygame.Color('black'))
 
+
+screen = pygame.display.set_mode((400, 300))
+done = False
+
+while not done:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            done = True
+    pygame.draw.rect(pygame.Rect(30, 30, 60,60))
+    pygame.display.flip()
+
 text_rect = text.get_rect(center=(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2 + 110))
 
 def game_loop():
